@@ -1,0 +1,183 @@
+import java.util.Scanner;
+public class Car
+{
+
+  public static void main(String[] args)
+	{
+
+		Scanner p = new Scanner(System.in);
+		System.out.print ("Corvette         Programmed By Torin Turner\n"
+			+"\n                                       _   _       "
+            +"\n                                      | | | |      "
+            +"\n               ___ ___     ___   _____| |_| |_ ___ "
++"\n              / __/ _ \\| '__\\ \\ / / _ \\ __| __/ _ \\"
++"\n              | (_| (_) | |  \\ V /  __/ |_| | |  __/ "
++"\n              \\___\\___/|_|    \\_/ \\___|\\__|\\__\\___|"
++"\n"
++"\n                            Torin Turner"  
++"\n"
+
+			+"\nYou will be given choices for building your Corvette."
+			+"\nPlease enter your selection after each prompt PLEASE INPUT WITH NO SPACES "
+			+"and proceed to next choice\n"
+			+"\n"
+			+"\nProgrammed By Torin Turner\n\n\n");	
+		
+		String color_choice, warranty_choice, tint_choice, radio_choice, door;
+		System.out.print ("Please enter your color:\n\n"
+			+ "Red, Blue, Green, Yellow, Orange, or Purple\n\n");
+		color_choice = p.next();
+		
+		System.out.print ("Please enter your Warranty of choice:\n"
+			+ "1 Year, 2 Year, 3 Year, 4 year, or Lifetime\n");
+		warranty_choice = p.next();
+		
+		System.out.print ("Please enter your Tint:   \n"
+			+ "10% Tint, 20% Tint, 50% Tint, or none\n");
+		tint_choice = p.next();
+		
+		System.out.print ("Please enter your Radio choice:\n"
+			+ "Sirius XM, Apple Radio, Android Play, Spotify, or Normal Radio\n");
+		radio_choice = p.next();
+
+		System.out.print ("Please enter 2 for a two door or 4 for a " 
+			+ "four door:\n");
+		door = p.next();
+
+		System.out.print ("\nYou have entered the following information for your Corvette:\n"
+			+ "\nCar Color Choice:\t" + color_choice
+			+ "\nWarranty Choice: \t" + warranty_choice
+			+ "\nTint Choice:     \t" + tint_choice
+			+ "\nRadio Choice:    \t" + radio_choice
+			+"\n"
+			+ "\nDoor amount:\t\t" + door
+			+"\n");
+			System.out.println("Would you like to see a crappy \"customized\" car? [Y or N]");
+			String crappyCar = p.next().toUpperCase();
+			if(crappyCar.equals("Y"))
+			{
+				System.out.println("\n        _______"
+            +"\n       //  ||\\ \\"
+            +"\n _____//___||_\\ \\___"
+            +"\n )  _     "+color_choice+"   _    \\"
+            +"\n |_/ \\________/ \\___|"
+            +"\n___\\_/________\\_/______"
+	        	+ "\n\n");
+			}
+			else if(crappyCar.equals("N"))
+			{
+				System.out.print ("Thank you for Playing!\n"
+						+"\n"
+						+"Programmed By Torin Turner!"
+						+"\n");
+			}
+		 System.out.println("Final Choice? [Y or N]: ");
+
+			//Response String
+			    String response = p.next().toUpperCase();
+
+			    if (response.equals("N")){
+			        System.out.println("What would you like to change?"
+			        		+"\nColor"
+			        		+"\nTint"
+			        		+"\nRadio"
+			        		+"\nDoor Amount"
+			        		+"\nWarranty");
+			        String c = p.next();
+			        if(c.equals("Color"))
+			        {
+			        	System.out.print ("Please enter your new color new:\n"
+			        			+ "Red, Blue, Green, Yellow, Orange, or Purple\n");
+			        	color_choice = p.next(); 
+			        	System.out.print ("\nYou have entered the following information for your Corvette:\n"
+			        			+ "\n\n\nCar Color Choice:\t" + color_choice
+			        			+ "\nWarranty Choice: \t" + warranty_choice
+			        			+ "\nTint Choice:     \t" + tint_choice
+			        			+ "\nRadio Choice:    \t" + radio_choice
+			        			+"\n"
+			        			+ "\nDoor amount:\t\t" + door
+			        			+ "\n\n");
+			        }
+			        else if(c.equals("Tint"))
+			        {
+			    		System.out.print ("Please enter your new Tint:   \n"
+			    		+ "10% Tint, 20% Tint, 50% Tint, or none\n");
+			    		tint_choice = p.next();
+			        	System.out.print ("\nYou have entered the following information for your Corvette:\n"
+			        	+ "\n\n\nCar Color Choice:\t" + color_choice
+			       		+ "\nWarranty Choice: \t" + warranty_choice
+			    		+ "\nTint Choice:     \t" + tint_choice
+			       		+ "\nRadio Choice:    \t" + radio_choice
+			        	+"\n"
+			        	+ "\nDoor amount:\t\t" + door
+			        	+ "\n\n");
+			        }
+			        else if(c.equals("Warranty"))
+			        {
+			    		System.out.print ("Please enter your new Warranty of choice:\n"
+			    		+ "1 Year, 2 Year, 3 Year, 4 year, or Lifetime\n");
+			    		warranty_choice = p.next();
+			        	System.out.print ("\nYou have entered the following information for your Corvette:\n"
+			        	+ "\n\n\nCar Color Choice:\t" + color_choice
+			       		+ "\nWarranty Choice: \t" + warranty_choice
+			    		+ "\nTint Choice:     \t" + tint_choice
+			       		+ "\nRadio Choice:    \t" + radio_choice
+			        	+"\n"
+			        	+ "\nDoor amount:\t\t" + door
+			        	+ "\n\n");
+			        }
+			        else if(c.equals("Radio"))
+			        {
+			    		System.out.print ("Please enter your new Radio choice:\n"
+			    		+ "Sirius XM, Apple Radio, Android Play, Spotify, or Normal Radio\n");
+			    		radio_choice = p.next();
+			        	System.out.print ("\nYou have entered the following information for your Corvette:\n"
+			        	+ "\n\n\nCar Color Choice:\t" + color_choice
+			       		+ "\nWarranty Choice: \t" + warranty_choice
+			    		+ "\nTint Choice:     \t" + tint_choice
+			       		+ "\nRadio Choice:    \t" + radio_choice
+			        	+"\n"
+			        	+ "\nDoor amount:\t\t" + door
+			        	+ "\n\n");
+			        }
+			        else if(c.equals("Door"))
+			        {
+			    		System.out.print ("Please enter 2 for a two door or 4 for a " 
+			    		+ "four door:\n");
+			    		door = p.next();
+			        	System.out.print ("\nYou have entered the following information for your Corvette:\n"
+			        	+ "\n\n\nCar Color Choice:\t" + color_choice
+			       		+ "\nWarranty Choice: \t" + warranty_choice
+			    		+ "\nTint Choice:     \t" + tint_choice
+			       		+ "\nRadio Choice:    \t" + radio_choice
+			        	+"\n"
+			        	+ "\nDoor amount:\t\t" + door
+			        	+ "\n\n");
+			        }
+			    }else if (response.equals("Y"))
+					System.out.println("Would you like to see a crappy \"customized\" car? [Y or N]");
+
+				if(crappyCar.equals("Y"))
+				{
+					System.out.println("\n\n\n"
+				+"\n        _______"
+	            +"\n       //  ||\\ \\"
+	            +"\n _____//___||_\\ \\___"
+	            +"\n )  _     "+color_choice+"   _    \\"
+	            +"\n |_/ \\________/ \\___|"
+	            +"\n___\\_/________\\_/______"
+	            +"\n\n\nThank you for Playing!\n"
+				+"\n"
+				+"Programmed By Torin Turner!"
+		        + "\n\n");
+				}
+				else if(crappyCar.equals("N"))
+				{
+					System.out.print ("Thank you for Playing!\n"
+							+"\n"
+							+"Programmed By Torin Turner!"
+							+"\n");
+				}
+
+	}
+}
