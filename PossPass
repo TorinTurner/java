@@ -1,0 +1,90 @@
+
+import java.util.Arrays;
+import java.util.Scanner;
+import java.util.ArrayList;
+/*
+Programmed by Torin Turner
+*/
+public class Password
+{/*
+if you know all the characters in the pass this will give you almost any possible combination
+*/
+ static ArrayList<String> ar = new ArrayList<>();
+/*
+This method will tell you the possible number of different combinations
+*/ 
+ 
+ 
+ static int Combo(String s){
+ 
+ char [] arr = s.toCharArray();
+ int [] arrC = new int [arr.length];
+ Arrays.fill(arrC, 0);
+  for(int i = 0;i<arr.length;i++){
+  if(arr[i]==arr[0]){
+   arrC[0]++;
+  }}
+   for(int i = 1;i<arr.length;i++){
+   boolean status = true;
+    for(int k = 0;k<i;k++){
+     if(arr[i]==arr[k]){status = false;}}
+    while(status){
+     for(int j = i;j<arr.length;j++){
+     if (arr[i]==arr[j]){
+      arrC[i]++;
+   }}
+    status = false;}}
+   int a = 1;
+   for(int i=0;i<arrC.length;i++){
+    a*=F(arrC[i]);
+   }
+ return F(arr.length)/a; }
+ /*
+ Torin Turner
+ */
+ static int F(int n){
+  int m = 1;
+  for(int i = n;i>0;i--){
+   m*=i;
+  }
+  return m;
+ }
+ /*
+ Torin Turner
+ */
+ static ArrayList<Integer> Rand(int n){
+  ArrayList<Integer> arr = new ArrayList<>(n);
+  int i =0;
+while(arr.size()!= n){
+   int j = (int)(Math.random()*(n));
+   if(!arr.contains(j)){
+    arr.add(j);
+   }
+ }
+ return arr;
+ }
+//Main method
+public static void main(String [] args){
+Scanner sc = new Scanner(System.in);
+String S = sc.nextLine().trim();
+if(S.length()==0){
+System.out.println("Enter data to get the results");
+}
+while(ar.size()!=Combo(S)){
+ String s = "";
+ ArrayList<Integer> arrr = new ArrayList<>(Rand(S.length()));
+for(int i = 0;i<arrr.size();i++){
+ s+=S.charAt(arrr.get(i));
+ 
+}
+if(!ar.contains(s)){
+ ar.add(s);
+ System.out.printf("%3d%2s\n",ar.indexOf(s)+1,"> "+s);
+}
+}
+
+
+}
+
+}
+  
